@@ -1,0 +1,55 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap');
+
+
+@import "tailwindcss";
+/* Your custom styles */
+
+@theme{
+  --font-oswald: 'Oswald', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  --color-primary: #012c1f;
+  --color-secondary: #08512d;
+}
+
+:root {
+  font-family: Roboto, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  background-image:url("/pattern-bg.png");
+  bacgroung-repeat: repeat ;
+  background-color: #012c1f
+}
+.pattern{
+  background-image:url("/pattern-bg.png");
+  bacgroung-repeat: repeat ;
+}
+.bg-image
+{
+background-image:url("/hero-bg.png") ;
+background:relative;
+
+}
+
+.bg-image::before {
+  content:"";
+  position:"absolute";
+  inset:0;
+  background:rgba(0,0,0,0.5);
+}
+.bg-image > * {
+  position: relative;
+}

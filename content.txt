@@ -1,0 +1,44 @@
+Headline: LIVE RACE STREAM FROM GATOR NATIONALS IN SARASOTA, FL / WATCH NOW
+
+Hero 
+ title: GET READY FOR NEW ADIDAS BANDS,
+ desc:Adidas tracks all begin with a starting gate and end with a finish line, but everything in between varies from track to track. Because no two tracks are alike, this action sport keeps you on your toes wherever you are racing.
+
+Blogs Card
+2019 NATIONAL CHAMPIONS
+CROWNED AT Reebok
+Membership has its perks. Joining ADIDAS means you can race at your local tracks
+
+2019 NATIONAL CHAMPIONS
+Membership has its perks.
+
+2019 NATIONAL CHAMPIONS
+CROWNED AT Reebok
+Membership has its perks. Joining ADIDAS means you can race at your local tracks
+
+
+Banner 
+2019 NATIONAL CHAMPIONS
+CROWNED AT Reebok
+Membership has its perks. Joining ADIDAS means you can race at your local tracks
+
+2019 NATIONAL CHAMPIONS
+CROWNED AT Reebok
+Membership has its perks. Joining ADIDAS means you can race at your local tracks
+
+events
+    { id: 1, title: "Show in USA", location: "USA" },
+    { id: 2, title: "Adidas Show in USA", location: "USA" },
+    { id: 3, title: "Adidas Show", location: "USA" },
+    { id: 4, title: "Adidas in USA", location: "USA" },
+
+
+Our Tracks / Find Events /Track Map/Shop/About Us 
+
+© copyright 2020 Adidas 
+
+bg-primary: #012c1f
+bg-secondry:#08512d
+08512d
+238041
+text-primary:white
