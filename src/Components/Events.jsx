@@ -22,7 +22,7 @@ const Events = () => {
                         {elem.id}
                     </div>
                     <div>
-                        <h3 className='underline'>
+                        <h3 className='underline underline-offset-3'>
                             {elem.title}
                         </h3>
                         <p>{elem.location}</p>

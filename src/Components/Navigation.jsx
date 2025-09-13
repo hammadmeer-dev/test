@@ -47,8 +47,8 @@ const Navigation = () => {
           <div>
             <img src="/logo.png" className="h-4 ml-2 md:h-8"/>
           </div>
-          <div className="p-2 block md:hidden" onClick={onMenuClick}>
-            <img src="burger-icon.png" />
+          <div className="block md:hidden pr-2" onClick={onMenuClick}>
+            <img src="burger-icon.png" className="w-6"/>
           </div>
           <div className="md:block hidden p-2">
             {arr.map((elem, index) => (
