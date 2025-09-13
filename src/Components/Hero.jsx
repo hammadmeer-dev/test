@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 import HeroSlide from "./HeroSlide";
-import ModalVideo from 'react-modal-video';
 const SampleNextArrow = (props) => {
   const { onClick } = props;
   return (
