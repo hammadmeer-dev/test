@@ -43,9 +43,9 @@ const Navigation = () => {
   return (
     <>
       <div className="w-full  bg-[#012c1f] pattern">
-        <div className="max-w-screen-xl mx-auto items-center flex justify-between p-3 md:p-0 ">
+        <div className="max-w-screen-xl mx-auto items-center flex justify-between p-3 md:p-0  ">
           <div>
-            <img src="/logo.png" className="h-4 ml-2 md:h-8"/>
+            <img src="/logo.png" className="h-4 ml-2 md:h-8 "/>
           </div>
           <div className="block md:hidden pr-2" onClick={onMenuClick}>
             <img src="burger-icon.png" className="w-6"/>

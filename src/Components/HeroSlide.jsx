@@ -18,7 +18,7 @@ function HeroSlide({setIsOpen,IsOpen}) {
               <img
                 src="/video-thumbnail-img.png"
                 alt="hero"
-                className="md:h-[370] h-[200px] transform object-cover object-center"
+                className="md:h-[370] h-[200px] transform object-cover object-center mt-2 md:mt-0"
               />
               <div className='absolute flex justify-center items-center transform translate-y-2 translate-x-2'> 
                     <button className='w-[85px] h-[85px] bg-primary pattern text-white rounded-full shadow-lg justify-center text-center flex ' onClick={() => setIsOpen(true)}><img src='/play-icon.png' className='h-8 w-8 mx-auto my-auto'/></button>
