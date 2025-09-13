@@ -1,78 +1,61 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { IoIosArrowForward } from "react-icons/io";
-import { IoIosArrowBack } from "react-icons/io";
-const SampleNextArrow = (props) => {
-  const { onClick } = props;
-  return (
-    <div
-      className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 text-4xl flex item-center"
-      onClick={onClick}
-    >
-      <IoIosArrowForward />
-    </div>
-  );
-};
-const SamplePrevArrow = (props) => {
-    const { onClick } = props;
-  return (
-    <div
-      className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 text-4xl flex item-center"
-      onClick={onClick}
-    >
-      <IoIosArrowBack />
-    </div>
-  );
-};
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+
+const SampleNextArrow = ({ onClick }) => (
+  <div
+    className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 text-4xl flex items-center justify-center cursor-pointer"
+    onClick={onClick}
+  >
+    <IoIosArrowForward />
+  </div>
+);
+
+const SamplePrevArrow = ({ onClick }) => (
+  <div
+    className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 text-4xl flex items-center justify-center cursor-pointer"
+    onClick={onClick}
+  >
+    <IoIosArrowBack />
+  </div>
+);
+
 const Products = () => {
+  const [slidesToShow, setSlidesToShow] = useState(4);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 600) {
+        setSlidesToShow(1);
+      } else if (window.innerWidth < 1024) {
+        setSlidesToShow(3);
+      } else {
+        setSlidesToShow(4);
+      }
+    };
+
+    handleResize(); // run on mount
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow,
+    slidesToScroll: slidesToShow,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    responsive: [
-    {
-      breakpoint: 1024, // tablets and below
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
     appendDots: (dots) => (
-      <div
-        style={{
-          position: "absolute",
-          width: "100%",
-        }}
-      >
-        <ul
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "6px",
-            margin: 0,
-            padding: 0,
-            listStyle: "none",
-          }}
-        >
-          {dots}
-        </ul>
+      <div className="absolute w-full">
+        <ul className="flex justify-center gap-2 m-0 p-0 list-none">{dots}</ul>
       </div>
     ),
-    customPaging: (i) => (
+    customPaging: () => (
       <div
         style={{
           width: "20px",
@@ -81,65 +64,19 @@ const Products = () => {
         }}
       />
     ),
-    
   };
+
   return (
-    <div className="slider-container mx-10 my-10">
+    <div className="slider-container lg:mx-10 md:mx-2  mx-2 my-10 relative">
       <Slider {...settings}>
-        <div className="flex">
-          <img
-            src="/thubnail-slider-img.png"
-            className="mx-auto p-2 pattern shadow-lg"
-          />
-        </div>
-        <div className="flex">
-          <img
-            src="/thubnail-slider-img.png"
-            className="mx-auto p-2 pattern shadow-lg"
-          />
-        </div>
-        <div className="flex">
-          <img
-            src="/thubnail-slider-img.png"
-            className="mx-auto p-2 pattern shadow-lg"
-          />
-        </div>
-        <div className="flex">
-          <img
-            src="/thubnail-slider-img.png"
-            className="mx-auto p-2 pattern shadow-lg"
-          />
-        </div>
-        <div className="flex">
-          <img
-            src="/thubnail-slider-img.png"
-            className="mx-auto p-2 pattern shadow-lg"
-          />
-        </div>
-        <div className="flex">
-          <img
-            src="/thubnail-slider-img.png"
-            className="mx-auto p-2 pattern shadow-lg"
-          />
-        </div>
-        <div className="flex">
-          <img
-            src="/thubnail-slider-img.png"
-            className="mx-auto p-2 pattern shadow-lg"
-          />
-        </div>
-        <div className="flex">
-          <img
-            src="/thubnail-slider-img.png"
-            className="mx-auto p-2 pattern shadow-lg"
-          />
-        </div>
-        <div className="flex">
-          <img
-            src="/thubnail-slider-img.png"
-            className="mx-auto p-2 pattern shadow-lg"
-          />
-        </div>
+        {Array.from({ length: 9 }).map((_, i) => (
+          <div key={i} className="flex">
+            <img
+              src="/thubnail-slider-img.png"
+              className="mx-auto p-2 pattern shadow-lg  w-84 md:w-44"
+            />
+          </div>
+        ))}
       </Slider>
     </div>
   );

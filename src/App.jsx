@@ -9,7 +9,7 @@ import CTA from "./Components/CTA";
 import Header from "./Components/Header";
 import Products from "./Components/Products";
 import Hero from "./Components/Hero";
-import ModalVideo from 'react-modal-video';
+import VideoPopup from "./Components/VideoPopup";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -17,13 +17,7 @@ function App() {
       <Headline />
       <Navigation />
       <Header />
-      <ModalVideo
-				channel="youtube"
-				youtube={{ mute: 0, autoplay: 0 }}
-				isOpen={isOpen}
-				videoId="L61p2uyiMSo"
-				onClose={() => setIsOpen(false)} 
-			/>
+      <VideoPopup setIsOpen={setIsOpen}  isOpen={isOpen} /> 
       <Hero setIsOpen={setIsOpen}  isOpen={isOpen} />
       <div className="max-w-screen-xl mx-auto items-center">
         <div className="grid grid-cols-12">
@@ -32,7 +26,7 @@ function App() {
             <Blog />
             <BannerShowCase />
           </div>
-          <div className="lg:col-span-3 md:col-span-4 col-span-12 mt-10">
+          <div className="lg:col-span-3 md::col-span-4 col-span-12 mt-10">
             <Events />
           </div>
         </div>
