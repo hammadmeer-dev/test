@@ -8,16 +8,17 @@ const Events = () => {
     { id: 4, title: "Adidas in USA", location: "USA" },
    ]
   return (
-    <div className='max-w-xs bg-secondary pattern text-white'>
+    <div className='flex md:justify-start  justify-center mb-13'>
+    <div className='md:w-[250px] w-full mx-6 bg-secondary pattern text-white'>
         <div className='px-4 py-2'>
-            <h2 className='font-oswald font-bold uppercase'>
+            <h2 className='font-oswald font-bold text-xl uppercase'>
                 Events
             </h2>
         </div>
-        <div className='p-4 space-y-4 bg-[#238041] pattern'>
+        <div className='p-5 space-y-5 bg-[#238041] pattern'>
             {events.map((elem,index)=>(
-                <div key={index} className='flex items-start gap-3'>
-                    <div className=' font-oswald font-bold bg-white text-primary flex w-10 h-10 items-center justify-center'>
+                <div key={index} className='flex items-start gap-2'>
+                    <div className=' font-oswald font-bold bg-white text-primary flex w-12 h-12 items-center justify-center'>
                         {elem.id}
                     </div>
                     <div>
@@ -32,6 +33,7 @@ const Events = () => {
             ))
 }
         </div> 
+    </div>
     </div>
   )
 }

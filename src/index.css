@@ -37,19 +37,14 @@ body{
   background-image:url("/pattern-bg.png");
   bacgroung-repeat: repeat ;
 }
-.bg-image
-{
-background-image:url("/hero-bg.png") ;
-background:relative;
-
+.bg-image {
+  background-image: url("/hero-bg.png"), url("/pattern-bg.png");
+  background-position: center, center; 
+  background-repeat: no-repeat, repeat; 
+  background-size: cover, auto; 
 }
 
-.bg-image::before {
-  content:"";
-  position:"absolute";
-  inset:0;
-  background:rgba(0,0,0,0.5);
+.slick-dots li.slick-active div {
+  background: #ffffff !important;
 }
-.bg-image > * {
-  position: relative;
-}
+

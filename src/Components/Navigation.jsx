@@ -43,15 +43,18 @@ const Navigation = () => {
   return (
     <>
       <div className="w-full  bg-[#012c1f] pattern">
-        <div className="max-w-screen-xl mx-auto items-center flex justify-between p-3  md:p-0 ">
+        <div className="max-w-screen-xl mx-auto items-center flex justify-between p-3 md:p-0 ">
           <div>
-            <img src="/logo.png" />
+            <img src="/logo.png" className="h-4 ml-2 md:h-8"/>
           </div>
-          <div className=" md:block hidden p-2">
+          <div className="p-2 block md:hidden" onClick={onMenuClick}>
+            <img src="burger-icon.png" />
+          </div>
+          <div className="md:block hidden p-2">
             {arr.map((elem, index) => (
               <button
                 key={index}
-                className={`mr-2 w-34 h-10 -skew-x-12 font-oswald font-semibold ${
+                className={`mr-2 w-34 h-10 -skew-x-12 font-oswald font-semibold  ${
                   elem.active ? "bg-[#217f40]" : "bg-[#012c1f]"
                 }`}
               >
@@ -61,10 +64,19 @@ const Navigation = () => {
               </button>
             ))}
           </div>
-          <div className="p-2 block md:hidden" onClick={onMenuClick}>
-            <img src="burger-icon.png" />
-          </div>
         </div>
+        <div className="w-dvw grid grid-cols-2 md:hidden">
+            {arr.map((elem, index) => (
+              <button
+                key={index}
+                className={` col-span-1 h-10 font-oswald font-semibold ${index === 0? "border-r-2 border-white" : ""} ${
+                  elem.active ? "bg-[#217f40]" : "bg-[#012c1f]"
+                }`}
+              >
+                {elem?.name}
+              </button>
+            ))}
+          </div>
       </div>
       <div className="w-full bg-[#08512d] pattern md:block hidden">
         <div className="max-w-screen-xl mx-auto items-center flex justify-between pr-30 ">
@@ -91,22 +103,22 @@ const Navigation = () => {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="w-full bg-secondary pattern overflow-hidden h-dvh fixed top-0 bottom-0 left-0 z-50">
+        <div className="w-full bg-secondary pattern overflow-hidden h-dvh   fixed top-0 bottom-0 left-0 z-50">
           <Headline />
-          <div className="max-w-dvw flex justify-between">
-          <div className="flex p-3">
-            <img src="/logo.png" />
+          <div className="max-w-dvw flex justify-between p-3 bg-primary pattern">
+          <div className="flex">
+            <img src="/logo.png" className="h-4 ml-2" />
           </div>
-           <div className="my-auto pr-3 md:hidden " onClick={onMenuClick}>
-            <img src="burger-icon.png" />
+           <div className="my-auto pr-2 md:hidden " onClick={onMenuClick}>
+            <img src="burger-icon.png" className="w-6" />
           </div>
         
           </div>
-                <div className="mt-4 w-dvw grid grid-cols-2 ">
+                <div className="pattern w-dvw grid grid-cols-2 bg-primary pattern ">
             {arr.map((elem, index) => (
               <button
                 key={index}
-                className={` col-span-1 h-10 font-oswald font-semibold ${
+                className={` col-span-1 h-10 font-oswald font-semibold ${index === 0? "border-r-2 border-white" : ""} ${
                   elem.active ? "bg-[#217f40]" : "bg-[#012c1f]"
                 }`}
               >
@@ -115,7 +127,7 @@ const Navigation = () => {
             ))}
           </div>
           <div className="w-dvw mt-3 px-3">
-          <div className="flex w-auto  h-10 font-oswald font-bold items-center bg-[#012c1f] pattern mx-auto">
+          <div className="flex w-auto  h-10 font-oswald font-bold overflow-hidden items-center bg-[#012c1f] pattern mx-auto">
             <input
               className="transparent outline-none pl-4 w-full"
               type="text"
@@ -129,7 +141,7 @@ const Navigation = () => {
             {nav.map((elem, index) => (
               <button
                 key={index}
-                className={`px-5 py-5 ml-5  font-oswald font-semibold block ${
+                className={`px-6 py-5 ml-5  font-oswald font-semibold block ${
                   elem.active ? "bg-[#217f40] pattern" : ""
                 }`
             }

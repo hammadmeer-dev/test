@@ -17,7 +17,8 @@ const Blog = () => {
     },
   ];
   return (
-    <div className="md:ml-20 md:mr-12 ml-0 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+    <div className="flex item-center justify-center border-top-1">
+    <div className="md:ml-20 md:mr-12 ml-0 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-8">
       {
         blog.map((elem,i)=>(
           <div key={i}>
@@ -25,6 +26,7 @@ const Blog = () => {
             </div>
         ))
       }
+    </div>
     </div>
   );
 };

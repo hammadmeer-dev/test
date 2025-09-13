@@ -21,17 +21,17 @@ function CTA() {
     console.log("Form Submitted");
   };
   return (
-    <div className="w-full bg-[#08512d] pattern py-10">
+    <div className="w-full bg-[#08512d] pattern py-8">
       <div className="max-w-screen-xl mx-auto text-center">
-        <div className="">
+        <div className=" mb-5">
           <h2 className="text-2xl font-oswald font-bold ">
             GET IN TOUCH WITH US
           </h2>
         </div>
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-6 w-[560px]  mx-auto">
-          <div className="col-span-1">
-            <label className="block text-white text-sm font-semibold mb-2">
-              Name
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-[560px] mx-auto">
+          <div className="col-span-1 mx-3 md:mx-0">
+            <label className="flex font-oswald  text-white text-lg font-bold md:mb-2">
+              NAME
             </label>
             <input
               className="w-full h-[37px] px-4 py-3 bg-white text-gray-400 placeholder-gray-400 border-none"
@@ -42,22 +42,24 @@ function CTA() {
               placeholder="Enter Name"
             />
           </div>
-          <div className="col-span-1">
-            <label className="block text-white text-sm font-semibold mb-2">
-              Email
+          <div className="col-span-1 mx-3 md:mx-0">
+            <label className="flex  font-oswald  text-white text-lg font-bold md:mb-2">
+              EMAIL
             </label>
             <input
               className="w-full  h-[37px] px-4 py-3 bg-white text-gray-400 placeholder-gray-400 border-none"
               type="text"
-              name="Email"
+              name="email"
               value={formData.email}
               onChange={handleInputChange}
               placeholder="Enter Email"
             />
           </div>
-          <div className="col-span-1">
-            <label className="block text-white text-sm font-semibold mb-2">
-              Country
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-[560px] mx-auto mt-2">
+          <div className="col-span-1 mx-3 md:mx-0 ">
+            <label className="flex  font-oswald  text-white text-lg font-bold md:mb-2">
+              COUNTRY
             </label>
             <select
               name="country"
@@ -71,9 +73,9 @@ function CTA() {
               <option value="Other">Other</option>
             </select>
           </div>
-          <div className="col-span-1">
-            <label className="block text-white text-sm font-semibold mb-2">
-              State
+          <div className="col-span-1 mx-3 md:mx-0">
+            <label className="flex md:text-xl font-oswald text-white text-lg font-bold md:mb-2">
+              STATE
             </label>
             <select
               name="State"
@@ -87,11 +89,13 @@ function CTA() {
               <option value="Other">Other</option>
             </select>
           </div>
-          <div className="col-span-2">
-            <label className="block text-white text-sm font-semibold mb-2">
-              Gender
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-[560px] mx-auto mt-2 ">
+          <div className="col-span-2 mx-4 md:mx-0">
+            <label className="flex md:text-xl font-oswald text-white text-lg font-bold md:mb-2">
+              GENDER
             </label>
-            <div className="flex flex-wrap gap-6">
+            <div className="flex flex-wrap gap-6 pt-1 ">
               <label className="flex items-center text-white cursor-pointer">
                 <input
                   className="w-6 h-6 mr-2 bg-white placeholder-gray-400 border-white text-green-300 focus-ring"
@@ -127,8 +131,10 @@ function CTA() {
               </label>
             </div>
           </div>
-          <div className="col-span-2">
-            <label className="block text-white text-sm font-semibold mb-2">
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-[560px] mx-auto mt-6">
+          <div className="col-span-2 mx-4 md:mx-0">
+            <label className="flex md:text-xl font-oswald text-white text-lg font-bold mb-2">
               COUNTRY
             </label>
             <textarea
@@ -139,18 +145,18 @@ function CTA() {
               placeholder="Message"
             />
           </div>
+          </div>
           <div className="flex justify-center pt-4 col-span-2">
             <button
               type="button"
               onClick={handleSubmit}
-              className="bg-primary  text-white font-oswald font-medium py-2 px-14 cursor-pointer mx-auto "
+              className="bg-primary pattern  text-white font-oswald font-medium py-2 px-14 cursor-pointer mx-auto "
             >
               SUBMIT
             </button>
           </div>
         </div>
       </div>
-    </div>
   );
 }
 
