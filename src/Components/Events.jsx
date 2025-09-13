@@ -27,8 +27,6 @@ const Events = () => {
                         </h3>
                         <p>{elem.location}</p>
                     </div>
-
-
                 </div>
             ))
 }

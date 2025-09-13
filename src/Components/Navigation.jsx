@@ -114,7 +114,7 @@ const Navigation = () => {
           </div>
         
           </div>
-                <div className="pattern w-dvw grid grid-cols-2 bg-primary pattern ">
+                <div className="pattern max-w-dvw grid grid-cols-2 bg-primary pattern ">
             {arr.map((elem, index) => (
               <button
                 key={index}

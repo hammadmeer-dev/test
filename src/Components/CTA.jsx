@@ -98,7 +98,7 @@ function CTA() {
             <div className="flex flex-wrap gap-6 pt-1 ">
               <label className="flex items-center text-white cursor-pointer">
                 <input
-                  className="w-6 h-6 mr-2 bg-white placeholder-gray-400 border-white text-green-300 focus-ring"
+                  className="w-6 h-6 mr-2 bg-white placeholder-gray-400 accent-[#08512d] border-white text-green-300 focus-ring"
                   type="radio"
                   name="gender"
                   value="Male"
@@ -109,7 +109,7 @@ function CTA() {
               </label>
               <label className="flex items-center text-white cursor-pointer">
                 <input
-                  className="w-6 h-6 mr-2 bg-white placeholder-gray-400 border-white text-green-300 focus-ring"
+                  className="w-6 h-6 mr-2 bg-white placeholder-gray-400 border-3 border-white accent-[#08512d] text-green-300 focus-ring"
                   type="radio"
                   name="gender"
                   value="Female"
@@ -120,7 +120,7 @@ function CTA() {
               </label>
               <label className="flex items-center text-white cursor-pointer">
                 <input
-                  className="w-6 h-6 mr-2 bg-white placeholder-gray-400 border-white text-green-300 focus-ring"
+                  className="w-6 h-6 mr-2 bg-white placeholder-gray-400 accent-[#08512d] border-white text-green-300 focus-ring"
                   type="radio"
                   name="gender"
                   value="Other"

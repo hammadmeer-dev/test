@@ -4,16 +4,16 @@ const Footer = () => {
   return (
     <div className="w-full ">
       <div className="max-w-screen-xl mx-auto text-center pt-6">
-        <p className="text-xl font-oswald font-normal text-center flex justify-center space-x-4">
-          <span>OUR TRACKS</span>
+        <p className="text-xl font-oswald font-normal text-center flex flex-wrap justify-center space-x-2 md:space-x-4">
+          <span className="whitespace-nowrap">OUR TRACKS</span>
           <span>/</span>
-          <span>FIND EVENTS</span>
+          <span className="whitespace-nowrap">FIND EVENTS</span>
           <span>/</span>
-          <span>TRACK MAP</span>
+          <span className="whitespace-nowrap">TRACK MAP</span>
           <span>/</span>
-          <span>SHOP</span>
+          <span className="whitespace-nowrap">SHOP</span>
           <span>/</span>
-          <span>ABOUT US</span>
+          <span className="whitespace-nowrap">ABOUT US</span>
         </p>
       </div>
       <div className="max-w-screen-xl mx-auto justify-center text-center flex mt-[18px] gap-6">

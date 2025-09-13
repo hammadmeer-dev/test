@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 import HeroSlide from "./HeroSlide";
-import ModalVideo from "react-modal-video";
+import ModalVideo from 'react-modal-video';
 const SampleNextArrow = (props) => {
   const { onClick } = props;
   return (
@@ -28,27 +28,15 @@ const SamplePrevArrow = (props) => {
     </div>
   );
 };
-const Hero = ({ setIsOpen, isOpen }) => {
+const Hero = ({setIsOpen,isOpen}) => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024, // tablets and below
-        settings: {
-          nextArrow: <SampleNextArrow />,
-          prevArrow: <SamplePrevArrow />,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-        },
-      },
-    ],
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     appendDots: (dots) => (
       <div
         style={{
@@ -82,24 +70,24 @@ const Hero = ({ setIsOpen, isOpen }) => {
   };
   return (
     <div className="max-w-dvw bg-image">
-      <div className="max-w-dvw pattern">
-        <div className="mx-10 mb-10 lg:h-[550px] md:h-[400px] h-[650px] md:pb-20 bg-[`/bg-hero.png`]">
-          <Slider {...settings}>
-            <div className="flex">
-              <HeroSlide setIsOpen={setIsOpen} IsOpen={isOpen} />
-            </div>
-            <div className="flex">
-              <HeroSlide />
-            </div>
-            <div className="flex">
-              <HeroSlide />
-            </div>
-            <div className="flex">
-              <HeroSlide />
-            </div>
-          </Slider>
+    <div className="max-w-dvw pattern">
+    <div className="mx-10 mb-10 lg:h-[550px] md:h-[400px] h-[550px] md:pb-20 bg-[`/bg-hero.png`]">
+      <Slider {...settings}>
+        <div className="flex">
+          <HeroSlide  setIsOpen={setIsOpen}  IsOpen={isOpen}/>
         </div>
-      </div>
+        <div className="flex">
+          <HeroSlide/>
+        </div>
+        <div className="flex">
+          <HeroSlide/>
+        </div>
+        <div className="flex">
+          <HeroSlide/>
+        </div>
+      </Slider>
+    </div>
+    </div>
     </div>
   );
 };
