@@ -67,7 +67,7 @@ const Products = () => {
   };
 
   return (
-    <div className="slider-container lg:mx-10 md:mx-2  mx-2 my-10 relative pb-20 border-b-1">
+    <div className="slider-container lg:mx-10 md:mx-2  mx-8 my-10 relative lg:pb-20 md:pb-10 pb-8  border-b-2 border-b-gray-200">
       <Slider {...settings}>
         {Array.from({ length: 9 }).map((_, i) => (
           <div key={i} className="flex">
