@@ -6,7 +6,7 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 const SampleNextArrow = ({ onClick }) => (
   <div
-    className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 text-4xl flex items-center justify-center cursor-pointer"
+    className="absolute hidden -right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 text-4xl lg:flex items-center justify-center cursor-pointer"
     onClick={onClick}
   >
     <IoIosArrowForward />
@@ -15,7 +15,7 @@ const SampleNextArrow = ({ onClick }) => (
 
 const SamplePrevArrow = ({ onClick }) => (
   <div
-    className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 text-4xl flex items-center justify-center cursor-pointer"
+    className="absolute hidden -left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 text-4xl lg:flex items-center justify-center cursor-pointer"
     onClick={onClick}
   >
     <IoIosArrowBack />
@@ -52,7 +52,7 @@ const Products = () => {
     prevArrow: <SamplePrevArrow />,
     appendDots: (dots) => (
       <div className="absolute w-full">
-        <ul className="flex justify-center gap-2 m-0 p-0 list-none">{dots}</ul>
+        <ul className="flex justify-center gap-2 m-0 list-none">{dots}</ul>
       </div>
     ),
     customPaging: () => (
@@ -67,17 +67,18 @@ const Products = () => {
   };
 
   return (
-    <div className="slider-container lg:mx-10 md:mx-2  mx-2 my-10 relative">
+    <div className="slider-container lg:mx-10 md:mx-2  mx-2 my-10 relative pb-20 border-b-1">
       <Slider {...settings}>
         {Array.from({ length: 9 }).map((_, i) => (
           <div key={i} className="flex">
             <img
               src="/thubnail-slider-img.png"
-              className="mx-auto p-2 pattern shadow-lg  w-84 md:w-44"
+              className="mx-auto p-2 pattern shadow-lg  w-84 md:w-44 mb-2"
             />
           </div>
         ))}
       </Slider>
+      
     </div>
   );
 };

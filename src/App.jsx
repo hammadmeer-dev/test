@@ -21,8 +21,9 @@ function App() {
       <Hero setIsOpen={setIsOpen}  isOpen={isOpen} />
       <div className="max-w-screen-xl mx-auto items-center overflow-hidden">
         <div className="grid grid-cols-12">
-          <div className="lg:col-span-9 md:col-span-8 col-span-12 ">
+          <div className="lg:col-span-9 md:col-span-8 col-span-12">
             <Products />
+            
             <Blog />
             <BannerShowCase />
           </div>

@@ -9,7 +9,7 @@ const SampleNextArrow = (props) => {
   const { onClick } = props;
   return (
     <div
-      className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 text-4xl flex item-center"
+      className="absolute hidden -right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 text-6xl lg:flex item-center"
       onClick={onClick}
     >
       <IoIosArrowForward />
@@ -20,7 +20,7 @@ const SamplePrevArrow = (props) => {
   const { onClick } = props;
   return (
     <div
-      className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 text-4xl flex item-center"
+      className="absolute hidden -left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 text-6xl text-bold lg:flex item-center"
       onClick={onClick}
     >
       <IoIosArrowBack />

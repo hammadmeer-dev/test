@@ -13,7 +13,7 @@ const BlogCard = ({title,desc}) => {
         <h2 className="font-oswald lg:font-medium lg:text-xl text-lg">
           {title}
         </h2>
-        <p className="font-roboto text-sm mt-2 ">
+        <p className="font-roboto  text-sm mt-2 ">
           {desc}
         </p>
       </div>

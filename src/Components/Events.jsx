@@ -11,7 +11,7 @@ const Events = () => {
     <div className='flex md:justify-start  justify-center mb-13'>
     <div className='lg:w-[250px] w-full mx-6 bg-secondary pattern text-white'>
         <div className='px-4 py-2'>
-            <h2 className='font-oswald font-bold text-xl uppercase'>
+            <h2 className='font-oswald font-Medium text-xl uppercase'>
                 Events
             </h2>
         </div>
@@ -22,10 +22,10 @@ const Events = () => {
                         {elem.id}
                     </div>
                     <div>
-                        <h3 className='underline underline-offset-3'>
+                        <h3 className='underline uppercase font-oswald font-medium underline-offset-3'>
                             {elem.title}
                         </h3>
-                        <p>{elem.location}</p>
+                        <p className='font-normal uppercase font-roboto'>{elem.location}</p>
                     </div>
                 </div>
             ))

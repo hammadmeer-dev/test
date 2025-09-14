@@ -79,12 +79,12 @@ const Navigation = () => {
           </div>
       </div>
       <div className="w-full bg-[#08512d] pattern md:block hidden">
-        <div className="max-w-screen-xl mx-auto items-center flex justify-between pr-30 ">
+        <div className="max-w-screen-xl mx-auto items-center flex justify-between lg:pr-30 md:pr-14 md:pl-2">
           <div className="h-full">
             {nav.map((elem, index) => (
               <button
                 key={index}
-                className={`w-34 h-16 -skew-x-12 font-oswald font-semibold hover:shadow-2xl ${
+                className={`lg:w-34 w-24 h-16 -skew-x-12 font-oswald lg:font-semibold font-normal hover:shadow-2xl ${
                   elem.active ? "bg-[#217f40] pattern" : ""
                 }`}
               >
@@ -92,7 +92,7 @@ const Navigation = () => {
               </button>
             ))}
           </div>
-          <div className="flex w-64 py-2 font-oswald font-bold items-center bg-[#012c1f] pattern ">
+          <div className="flex lg:w-64 w-44 py-2 font-oswald font-bold items-center bg-[#012c1f] pattern ">
             <input
               className="transparent outline-none pl-4 w-full"
               type="text"
