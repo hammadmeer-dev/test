@@ -14,8 +14,10 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
+      <div className="sticky z-200 top-0 ">
       <Headline />
       <Navigation />
+      </div>
       <Header />
       <VideoPopup setIsOpen={setIsOpen}  isOpen={isOpen} /> 
       <Hero setIsOpen={setIsOpen}  isOpen={isOpen} />
