@@ -9,7 +9,7 @@ const BlogCard = ({title,desc}) => {
         alt="Post Image"
         className="w-full h-40 object-cover"
       />
-      <div className="p-4 bg-[#238041] pattern lg:h-38 md:h-54 h-38  capitalize">
+      <div className="p-4 bg-[#238041] pattern lg:h-38 h-54 capitalize">
         <h2 className="font-oswald lg:font-medium lg:text-xl text-lg">
           {title}
         </h2>

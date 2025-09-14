@@ -19,14 +19,14 @@ function App() {
       <Header />
       <VideoPopup setIsOpen={setIsOpen}  isOpen={isOpen} /> 
       <Hero setIsOpen={setIsOpen}  isOpen={isOpen} />
-      <div className="max-w-screen-xl mx-auto items-center">
+      <div className="max-w-screen-xl mx-auto items-center overflow-hidden">
         <div className="grid grid-cols-12">
-          <div className="lg:col-span-9 md:col-span-8 col-span-12 mt-10">
+          <div className="lg:col-span-9 md:col-span-8 col-span-12 ">
             <Products />
             <Blog />
             <BannerShowCase />
           </div>
-          <div className="lg:col-span-3 md::col-span-4 col-span-12 mt-10">
+          <div className="lg:col-span-3 md:col-span-4 col-span-12 mt-10">
             <Events />
           </div>
         </div>

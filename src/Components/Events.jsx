@@ -9,7 +9,7 @@ const Events = () => {
    ]
   return (
     <div className='flex md:justify-start  justify-center mb-13'>
-    <div className='md:w-[250px] w-full mx-6 bg-secondary pattern text-white'>
+    <div className='lg:w-[250px] w-full mx-6 bg-secondary pattern text-white'>
         <div className='px-4 py-2'>
             <h2 className='font-oswald font-bold text-xl uppercase'>
                 Events

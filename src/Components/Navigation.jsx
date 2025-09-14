@@ -65,7 +65,7 @@ const Navigation = () => {
             ))}
           </div>
         </div>
-        <div className="w-dvw grid grid-cols-2 md:hidden">
+        <div className="w-full grid grid-cols-2 md:hidden">
             {arr.map((elem, index) => (
               <button
                 key={index}
@@ -109,12 +109,12 @@ const Navigation = () => {
           <div className="flex">
             <img src="/logo.png" className="h-4 ml-2" />
           </div>
-           <div className="my-auto pr-2 md:hidden " onClick={onMenuClick}>
+           <div className="my-auto pr-2 md:hidden" onClick={onMenuClick}>
             <img src="burger-icon.png" className="w-6" />
           </div>
         
           </div>
-                <div className="pattern max-w-dvw grid grid-cols-2 bg-primary pattern ">
+                <div className="pattern max-w-dvw grid grid-cols-2 bg-primary pattern">
             {arr.map((elem, index) => (
               <button
                 key={index}
