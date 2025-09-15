@@ -63,12 +63,12 @@ Features
 
 ## 📸 Screenshots
 ###  PC View
-![Responsive](public\pc.png)
+![Responsive](public/pc.png)
 ### Tablet View
-![Video Popup](public\tablet.png)
+![Video Popup](public/tablet.png)
 ### Mobile View
-![Homepage](public\mobile.png)
+![Homepage](public/mobile.png)
 ### Responsive Navigation
-![Homepage](public\mobile.png)
+![Homepage](public/mobile.png)
 
 
