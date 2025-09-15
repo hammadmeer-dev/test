@@ -70,7 +70,7 @@ const Hero = ({setIsOpen,isOpen}) => {
   return (
     <div className="max-w-dvw bg-image  ">
     <div className="max-w-dvw pattern bg-[rgba(1,44,31)]/70 ">
-    <div className="mx-10 mb-10 lg:h-[550px] md:h-[400px] h-[550px] md:pb-20">
+    <div className="mx-10 mb-10 lg:h-[550px] md:h-[450px] h-[550px] md:pb-20">
       <Slider {...settings}>
         <div className="flex">
           <HeroSlide  setIsOpen={setIsOpen}  IsOpen={isOpen}/>

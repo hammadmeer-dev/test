@@ -2,7 +2,7 @@ import React from 'react'
 
 function HeroSlide({setIsOpen,IsOpen}) {
   return (
-    <div><div className="flex flex-wrap justify-between md:p-2 text-white lg:mb-30 md:mb-0 mb-6 ">
+    <div><div className="flex flex-wrap justify-between md:p-2 text-white xl:mb-30 lg:mb-20 md:mb-0 mb-6 ">
             <div className="md:pl-2 w-full md:w-1/2 order-2 md:order-1 mt-8 sm:mt-4">
               <div className="w-full mx-auto my-auto  justify-center items-center h-full">
                 <h2 className="md:text-5xl text-2xl font-bold md:font-extrabold font-oswald md:w-[450px]  mx-auto md:mt-20 lg:ml-42 ">GET READY FOR NEW ADIDAS BANDS</h2>
